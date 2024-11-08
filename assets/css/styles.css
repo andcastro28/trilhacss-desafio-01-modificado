@@ -1,0 +1,207 @@
+@import url('reset.css');
+
+body {
+    background-color: black;
+  }
+
+  section {
+    margin: 150px auto;
+  }/* 3 secoes e distancia de margem entre elas*/
+
+  p {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+    font-size: 3em;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 32px; 
+    /*2rem;
+    Portanto, se o tamanho da fonte do elemento raiz for 16px, 
+    qualquer elemento na página com tamanho da fonte 1rem também terá 16 pixels.
+    Um elemento na página com tamanho de fonte de 2rem terá 32 pixels
+    .*/
+    color: #d81e3d;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .banner{
+    background-color: #0e77a0;
+    /* define cor de fundo */
+
+    background-image: url(../images/banner.png) , linear-gradient(rgba(0, 0, 0, 0.6) , rgba(22, 117, 158, 0),rgba(0, 0, 0, 0.6)  );
+    /* define a cor de gradiente na imagem
+    RGBA é o sistema de cores formado pelas cores 
+    vermelho (red), verde (green), azul (blue) e pelo canal alfa. 
+    O sistema permite exibir todas as cores do sistema RGB e 
+    a utilização da transparência de imagem. 
+    */    
+    background-size: cover;
+    /* cover diz ao navegador para garantir que a imagem
+     sempre cubra todo o contêiner,
+     mesmo que seja necessário esticar a imagem ou cortar um pouco uma das bordas */
+    padding: 20px;
+    text-align: center;
+    /* ajusta o texto do banner para centralizar-se na tela */
+    
+    margin-bottom: 40px;
+/* tamanho do banner */
+    height: 600px;
+    padding-top: 60px; /* ajuste do inicio do top */
+    /* o padding-top é um espaço extra acima do topo do banner,
+    e o height é a altura do banner */
+
+    border-bottom: 2px solid #33A8DB;
+  }
+/* toda configuracao da classe banner*/
+
+  .banner .logo img{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .banner .logo {
+    background-color: rgba(0, 0, 0, .2);
+    height: 268px;
+    width: 268px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .banner p {
+    font-size: 20px; /*1.25rem;*/
+    margin: 16px 0 24px ;    /*
+    margin top lados bottom*/
+  }
+
+
+  .banner h1{
+    font-size: 40px; /*2.5rem;*/
+    font-weight: 900; /*largura de cada letra da fonte*/
+    text-transform: uppercase; /* maiusculo */
+    color: transparent;/* a fonte assume a cor gradiente */
+    background: -webkit-linear-gradient(#33A8DB, #b74214);
+    /*background-clip: text;*/
+    -webkit-background-clip: text;
+  }
+
+  .banner .banner-content button {
+    color: #4edd31;
+    font-size: 16px; /*1rem;*/
+    font-weight: bold;
+    padding: 16px 32px;/* altura  e largura do botao */
+    text-transform: uppercase; /* tudo maisculo*/
+    letter-spacing: 4px;
+    background-color: transparent;  /*fundo transparente botao*/
+    border-image: linear-gradient(#c83bcd, #1572B7);
+    border-image-slice: 10;
+    border-radius: 30px;
+  }
+
+/*  configuracao da 1 secao com section id=course-content  */  
+
+#course-content p{
+    font-size: 20px; /*1.25rem;*/
+    margin: 16px 0 24px ;    /*
+    margin top lados bottom*/
+}
+
+#course-content {
+  width: 850px;
+  text-align: center;
+}
+/*  configuracao da 1 secao com modulo 1, 2, 3 cursos  */
+#course-content .modules-list {
+  margin: 24px 0;
+}
+
+/*  configuracao da div 3 botoes  */
+#course-content .modules-list .module {
+  color: white; /*cor do texto*/
+  background-color: #252525;/*cor do fundo*/
+  
+  width: 630px;    /*largura do botao*/
+  margin: 0 auto 24px;  /*largura da margin*/
+  border: 5px solid #56e749; /*largura da borda*/
+  padding: 16px;
+  border-radius: 20px 120px;  /*curva das laterais*/
+  box-shadow: inset -15px 6px 8px rgba(192, 184, 184, 0.7);
+  /*sombra interna*/
+}
+/*  configuracao da span 3 botoes  */
+#course-content .modules-list .module span {
+  color: #c90d4c;
+}
+
+/*  configuracao da 2 secao com section id=transform  */  
+#transform-world {
+  height: 660px;
+  background-size: cover;
+  /* cover diz ao navegador para garantir que a imagem
+     sempre cubra todo o contêiner,
+     mesmo que seja necessário esticar a imagem ou cortar um pouco uma das bordas */
+  background-image: url("../images/woman-code.png");
+  background-attachment: fixed; /* imagem fixa */
+  border-top: 10px solid #d80e4080;  /* em cima*/
+  border-bottom: 10px solid #27da1080; /*embaixo*/
+  padding: 250px;
+}
+
+#transform-world p {
+  font-weight: 1000; /* grosura das letras*/
+  font-size: 40px; /*2.5rem;*/
+  text-transform: lowercase;/* tudo minusculo */
+  max-width: 450px; /* largura do conteiner*/
+  text-shadow: 8px 5px #33A8DB;
+}
+
+/*  configuracao da 3 secao com section id=professional  */
+#professional-challenges {
+  text-align: center;
+  width: 800px;
+}
+
+#professional-challenges img {
+  margin: 62px 0;
+}
+
+#professional-challenges p {
+  font-size: 20px; /*1.25rem;*/
+  margin: 16px 0 24px ;    /*
+  margin top lados bottom*/
+}
+
+/*  configuracao da footer  */
+footer {
+  padding: 80px 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(18, 230, 11, 0), rgba(78, 241, 13, 0.2));
+  border-top: 10px solid #e7102d80;
+}
+
+footer .dio-logo {
+  width: 400px;
+}
+
+footer a {
+  color: #33A8DB;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer p{
+    font-weight: 300; /* grosura das letras*/
+    font-size: 30px; /*2.5rem;*/
+  
+}
